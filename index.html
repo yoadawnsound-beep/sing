@@ -1,0 +1,65 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#061027"><title>홈 | 달스케이프</title><style>
+:root{--bg:#061027;--panel:#0b1b3c;--panel2:#102753;--line:#234d91;--text:#eef4ff;--muted:#a9c2ed;--blue:#367dff;--violet:#7865ff;--cyan:#7bdcff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#193e7a 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.6}
+header{padding:16px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;background:#061027ed;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px}.moon{font-size:32px;color:#b8d5ff;text-shadow:0 0 16px #5ca9ff}
+nav{display:flex;gap:7px;flex-wrap:wrap}nav a,.back{color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px}nav a:hover,.back:hover{background:var(--panel2)}
+main{max-width:1180px;margin:auto;padding:22px;display:grid;gap:18px}.hero{border:1px solid var(--line);border-radius:24px;padding:clamp(24px,5vw,50px);background:linear-gradient(110deg,#0a1a3bfa,#102d60e8),radial-gradient(circle at 85% 30%,#5c81ff,transparent 35%);position:relative;overflow:hidden}.hero:after{content:"☾  ✦   ·  ✧   ✦";position:absolute;right:25px;top:15px;color:#b9d5ff;font-size:24px;letter-spacing:9px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.16em;font-weight:800}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.16;margin:12px 0}.hero p{max-width:690px;color:#d0e0ff}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:linear-gradient(145deg,#0b1b3c,#08152f);border:1px solid var(--line);border-radius:19px;padding:21px;min-width:0}.card h2,.card h3{margin:0 0 7px}.card p{color:var(--muted);font-size:14px}.tile{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--text);transition:.15s}.tile:hover{transform:translateY(-2px);border-color:#75a8ff}.tile .symbol{font-size:28px;color:#9bbdff}.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(100deg,var(--violet),var(--blue));color:white;border:0;border-radius:12px;padding:12px 17px;font:inherit;font-weight:750;text-decoration:none;cursor:pointer}.btn.secondary{background:#132a54;border:1px solid var(--line)}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:13px;color:#dbe8ff}input,select,textarea{width:100%;padding:12px;border-radius:11px;background:#06132d;border:1px solid #31558d;color:var(--text);font:inherit}textarea{min-height:110px;resize:vertical}.result{border:1px solid #31558d;background:#07152f;border-radius:14px;padding:16px;margin-top:15px}.result h3{margin-top:0}.muted{color:var(--muted);font-size:13px}.tags span{display:inline-block;background:#122d59;border:1px solid #31558d;border-radius:999px;padding:5px 10px;margin:3px;font-size:12px}.list{display:grid;gap:10px}.list a{display:block;text-decoration:none;color:var(--text);padding:14px;border-radius:13px;background:#0a1b3a;border:1px solid var(--line)}.list a:hover{background:#102753}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tech{padding:13px;border:1px solid var(--line);border-radius:13px;background:#091833}.tech strong{display:block}.tech small{color:var(--muted)}.check{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;margin:7px 0;background:#091833}.check input{width:auto}.progress{height:8px;background:#1c3158;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan));width:0}footer{padding:25px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}@media(max-width:560px){header{position:static}.grid{grid-template-columns:1fr}main{padding:14px}.hero:after{opacity:.3}}
+
+/* Responsive compatibility: Android phones, tablets and desktop PCs */
+html{width:100%;max-width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{width:100%;min-width:0;overflow-x:hidden}
+header{width:100%;padding:12px clamp(12px,3vw,28px);gap:10px}
+.brand{min-width:0}
+nav{min-width:0;max-width:100%;gap:6px}
+nav a,.back{min-height:40px;display:inline-flex;align-items:center;justify-content:center;white-space:normal}
+main{width:100%;min-width:0}
+main>*{min-width:0}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card,.hero,.result,.tech{min-width:0;overflow-wrap:anywhere}
+img,video,audio,canvas,svg{max-width:100%}
+input,select,textarea,button{max-width:100%;font-size:16px}
+button,.btn{min-height:44px;touch-action:manipulation}
+textarea{width:100%}
+pre,code{white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:900px){
+  header{align-items:flex-start}
+  nav{flex:1 1 100%;display:flex;flex-wrap:wrap}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  main{padding:18px}
+}
+@media(max-width:600px){
+  header{position:static;padding:12px;display:block}
+  .brand{margin-bottom:10px;font-size:20px}
+  nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  nav a,.back{padding:9px 8px;text-align:center;font-size:13px}
+  main{padding:12px;gap:12px}
+  .hero{padding:22px 17px;border-radius:17px}
+  .hero h1{font-size:clamp(27px,8vw,38px)}
+  .hero:after{right:8px;letter-spacing:3px;font-size:17px}
+  .grid,.two{grid-template-columns:minmax(0,1fr);gap:12px}
+  .card{padding:16px;border-radius:15px}
+  .btn{width:100%;white-space:normal;text-align:center}
+  .field{min-width:0}
+  input,select,textarea{min-width:0}
+  footer{padding:18px 12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+</style></head><body>
+<header><a class="brand" href="index.html" style="color:inherit;text-decoration:none"><span class="moon">☾</span><span>달스케이프<br><small style="font-size:12px;color:#a9c2ed;font-weight:500">보컬 가이드</small></span></a><nav><a href="index.html" style="background:#173b7a">홈</a><a href="search.html">노래 검색</a><a href="lyrics.html">가사 분석</a><a href="techniques.html">보컬 기술</a><a href="practice.html">연습 가이드</a></nav></header>
+<main>
+<section class="hero"><div class="eyebrow">MOONLIGHT VOCAL STUDIO</div><h1>노래를 이해하고,<br>나만의 목소리로 부르세요.</h1><p>좋아하는 노래를 찾고, 가사 구간별 표현법을 살펴보고, 나에게 맞는 보컬 기술을 연습해요.</p><a class="btn" href="search.html">노래 검색 시작하기 →</a></section>
+<section class="grid">
+<a class="card tile" href="search.html"><span class="symbol">⌕</span><h2>1. 노래 검색</h2><p>노래 제목과 가수를 입력하고 연습할 노래 정보를 기록해요.</p><span class="btn">노래 검색 페이지 열기</span></a>
+<a class="card tile" href="lyrics.html"><span class="symbol">▤</span><h2>2. 가사 구간별 부르는 법</h2><p>호흡, 발음, 감정, 강약과 음 연결을 구간별로 연습해요.</p><span class="btn">가사 분석 페이지 열기</span></a>
+<a class="card tile" href="techniques.html"><span class="symbol">♬</span><h2>3. 보컬 기술 배우기</h2><p>진성·가성·믹스 보이스, 고음, 호흡, 비브라토를 배워요.</p><span class="btn">보컬 기술 페이지 열기</span></a>
+<a class="card tile" href="practice.html"><span class="symbol">◎</span><h2>연습 가이드</h2><p>단계별 연습 순서와 체크리스트로 꾸준히 연습해요.</p><span class="btn">연습 페이지 열기</span></a>
+<div class="card"><h2>🌙 오늘의 팁</h2><p>고음은 큰 소리로 밀어붙이지 말고, 편한 음역에서 천천히 시작하세요. 목에 통증이 있으면 쉬어 주세요.</p></div>
+<div class="card"><h2>🎧 사용 안내</h2><p>각 버튼은 별도의 HTML 페이지를 엽니다. 노래 검색과 음성 자동 분석을 실제로 연결하려면 외부 API 또는 서버 개발이 추가로 필요해요.</p></div>
+</section></main><footer>☾ 달스케이프 보컬 가이드 · 만든 사람: 달스케이프<br>노래를 이해하고, 나만의 목소리로 부르세요.</footer><script>
+const $=id=>document.getElementById(id);
+function safe(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function showGuide(target,title,items){if(!target)return;target.innerHTML='<h3>'+title+'</h3><ul>'+items.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ul>';}
+</script></body></html>

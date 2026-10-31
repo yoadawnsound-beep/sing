@@ -1,0 +1,101 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#061027"><title>보컬 기술 | 달스케이프</title><style>
+:root{--bg:#061027;--panel:#0b1b3c;--panel2:#102753;--line:#234d91;--text:#eef4ff;--muted:#a9c2ed;--blue:#367dff;--violet:#7865ff;--cyan:#7bdcff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#193e7a 0,transparent 34%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.6}
+header{padding:16px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;background:#061027ed;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px}.moon{font-size:32px;color:#b8d5ff;text-shadow:0 0 16px #5ca9ff}
+nav{display:flex;gap:7px;flex-wrap:wrap}nav a,.back{color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px}nav a:hover,.back:hover{background:var(--panel2)}
+main{max-width:1180px;margin:auto;padding:22px;display:grid;gap:18px}.hero{border:1px solid var(--line);border-radius:24px;padding:clamp(24px,5vw,50px);background:linear-gradient(110deg,#0a1a3bfa,#102d60e8),radial-gradient(circle at 85% 30%,#5c81ff,transparent 35%);position:relative;overflow:hidden}.hero:after{content:"☾  ✦   ·  ✧   ✦";position:absolute;right:25px;top:15px;color:#b9d5ff;font-size:24px;letter-spacing:9px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:.16em;font-weight:800}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.16;margin:12px 0}.hero p{max-width:690px;color:#d0e0ff}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:linear-gradient(145deg,#0b1b3c,#08152f);border:1px solid var(--line);border-radius:19px;padding:21px;min-width:0}.card h2,.card h3{margin:0 0 7px}.card p{color:var(--muted);font-size:14px}.tile{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--text);transition:.15s}.tile:hover{transform:translateY(-2px);border-color:#75a8ff}.tile .symbol{font-size:28px;color:#9bbdff}.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(100deg,var(--violet),var(--blue));color:white;border:0;border-radius:12px;padding:12px 17px;font:inherit;font-weight:750;text-decoration:none;cursor:pointer}.btn.secondary{background:#132a54;border:1px solid var(--line)}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:13px;color:#dbe8ff}input,select,textarea{width:100%;padding:12px;border-radius:11px;background:#06132d;border:1px solid #31558d;color:var(--text);font:inherit}textarea{min-height:110px;resize:vertical}.result{border:1px solid #31558d;background:#07152f;border-radius:14px;padding:16px;margin-top:15px}.result h3{margin-top:0}.muted{color:var(--muted);font-size:13px}.tags span{display:inline-block;background:#122d59;border:1px solid #31558d;border-radius:999px;padding:5px 10px;margin:3px;font-size:12px}.list{display:grid;gap:10px}.list a{display:block;text-decoration:none;color:var(--text);padding:14px;border-radius:13px;background:#0a1b3a;border:1px solid var(--line)}.list a:hover{background:#102753}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tech{padding:13px;border:1px solid var(--line);border-radius:13px;background:#091833}.tech strong{display:block}.tech small{color:var(--muted)}.check{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;margin:7px 0;background:#091833}.check input{width:auto}.progress{height:8px;background:#1c3158;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan));width:0}footer{padding:25px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}@media(max-width:560px){header{position:static}.grid{grid-template-columns:1fr}main{padding:14px}.hero:after{opacity:.3}}
+
+/* Responsive compatibility: Android phones, tablets and desktop PCs */
+html{width:100%;max-width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{width:100%;min-width:0;overflow-x:hidden}
+header{width:100%;padding:12px clamp(12px,3vw,28px);gap:10px}
+.brand{min-width:0}
+nav{min-width:0;max-width:100%;gap:6px}
+nav a,.back{min-height:40px;display:inline-flex;align-items:center;justify-content:center;white-space:normal}
+main{width:100%;min-width:0}
+main>*{min-width:0}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card,.hero,.result,.tech{min-width:0;overflow-wrap:anywhere}
+img,video,audio,canvas,svg{max-width:100%}
+input,select,textarea,button{max-width:100%;font-size:16px}
+button,.btn{min-height:44px;touch-action:manipulation}
+textarea{width:100%}
+pre,code{white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:900px){
+  header{align-items:flex-start}
+  nav{flex:1 1 100%;display:flex;flex-wrap:wrap}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  main{padding:18px}
+}
+@media(max-width:600px){
+  header{position:static;padding:12px;display:block}
+  .brand{margin-bottom:10px;font-size:20px}
+  nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  nav a,.back{padding:9px 8px;text-align:center;font-size:13px}
+  main{padding:12px;gap:12px}
+  .hero{padding:22px 17px;border-radius:17px}
+  .hero h1{font-size:clamp(27px,8vw,38px)}
+  .hero:after{right:8px;letter-spacing:3px;font-size:17px}
+  .grid,.two{grid-template-columns:minmax(0,1fr);gap:12px}
+  .card{padding:16px;border-radius:15px}
+  .btn{width:100%;white-space:normal;text-align:center}
+  .field{min-width:0}
+  input,select,textarea{min-width:0}
+  footer{padding:18px 12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+</style></head><body>
+<header><a class="brand" href="index.html" style="color:inherit;text-decoration:none"><span class="moon">☾</span><span>달스케이프<br><small style="font-size:12px;color:#a9c2ed;font-weight:500">보컬 가이드</small></span></a><nav><a href="index.html">홈</a><a href="search.html">노래 검색</a><a href="lyrics.html">가사 분석</a><a href="techniques.html" style="background:#173b7a">보컬 기술</a><a href="practice.html">연습 가이드</a></nav></header>
+<main>
+<section class="hero"><div class="eyebrow">03 · VOCAL TECHNIQUES</div><h1>보컬 기술 배우기</h1><p>목에 무리를 주지 않고 편안한 소리부터 단계적으로 익혀요.</p></section>
+<section class="grid">
+<div class="card"><h2>진성</h2><p>말할 때 목소리와 가까운 소리예요. 편한 음역에서 가볍게 시작하고 목에 힘을 과하게 주지 마세요.</p></div>
+<div class="card"><h2>가성</h2><p>가볍고 부드러운 소리예요. 숨을 과하게 밀지 말고 편안한 음에서 짧게 연결해요.</p></div>
+<div class="card"><h2>믹스 보이스</h2><p>여러 발성 감각을 균형 있게 조절하는 기술이에요. 억지로 흉내 내기보다 천천히 익혀요.</p></div>
+<div class="card"><h2>두성·고음</h2><p>높은 음에서 목을 조이거나 소리를 밀지 마세요. 작은 음량과 낮은 키에서 연습해요.</p></div>
+<div class="card"><h2>복식호흡</h2><p>어깨를 들썩이지 않고 편안하게 숨을 들이마신 뒤, '스—' 소리로 일정하게 내쉬는 연습부터 해요.</p></div>
+<div class="card"><h2>비브라토</h2><p>한 음을 안정적으로 유지하는 것부터 시작해요. 목을 억지로 떨지 말고 자연스러운 울림을 익혀요.</p></div>
+<div class="card"><h2>음정 조절</h2><p>짧은 멜로디를 듣고 따라 부른 뒤 녹음해 비교하세요. 어려우면 키를 낮춰도 괜찮아요.</p></div>
+<div class="card"><h2>리듬·발음</h2><p>가사를 말하듯 읽고 박자를 세어 보세요. 자음은 분명하게, 모음은 자연스럽게 이어 줍니다.</p></div>
+<div class="card"><h2>감정·강약</h2><p>핵심 단어를 정하고 절과 후렴의 강약에 차이를 주세요. 모든 부분을 똑같이 크게 부르지 마세요.</p></div>
+<div class="card"><h2>목 긁는 창법 · 거친 음색</h2><p>거친 음색은 목을 세게 긁거나 조여서 만들지 마세요. 목에 힘을 주지 않은 편안한 말소리와 가벼운 허밍부터 연습하세요.</p><p><b>안전한 순서:</b> 편한 말소리 → 작은 음량의 허밍 → 짧게 녹음해 듣기. 목이 아프거나 쉬거나 기침이 나면 즉시 중단하고 쉬세요.</p><p class="muted">강한 스크리밍·그로울링은 혼자 무리해서 연습하지 말고, 안전한 발성 지도를 받으세요.</p></div>
+</section>
+<section class="card" id="voice-check">
+<h2>🎙️ 내 목소리 녹음하고 연습 상태 확인하기</h2>
+<p>마이크로 짧게 녹음한 뒤 재생해 보세요. 아래 체크는 입력 음량에 대한 참고 안내이며, AI가 음정·박자·가창력이나 목소리의 좋고 나쁨을 판정하는 기능은 아니에요.</p>
+<div class="field"><label for="recordSeconds">녹음 길이</label><select id="recordSeconds"><option value="10">10초</option><option value="20">20초</option><option value="30">30초</option></select></div>
+<div class="two"><button class="btn" id="startRecord">● 녹음 시작</button><button class="btn secondary" id="stopRecord" disabled>■ 녹음 끝내기</button></div>
+<p id="recordStatus" class="muted" aria-live="polite">마이크 권한을 허용해 주세요. 녹음 기능은 HTTPS 주소(예: GitHub Pages)에서 사용하는 것을 권장해요.</p>
+<audio id="playback" controls style="display:none;width:100%;margin-top:12px"></audio>
+<div class="result" id="voiceFeedback"><h3>연습 피드백</h3><p class="muted">녹음 후 재생해서 소리가 편안하고 또렷한지 확인하세요.</p></div>
+<button class="btn secondary" id="analyzeRecording" disabled>녹음 상태 기본 체크</button>
+<div class="result"><h3>잘 부르고 있는지 확인하는 체크리스트</h3>
+<label class="check"><input type="checkbox"> 목이나 턱에 통증·조임 없이 편하게 불렀어요.</label>
+<label class="check"><input type="checkbox"> 가사가 또렷하게 들리고 호흡이 급하게 끊기지 않아요.</label>
+<label class="check"><input type="checkbox"> 원곡과 비교해 음정과 리듬을 확인했어요.</label>
+<label class="check"><input type="checkbox"> 녹음을 듣고 다음에 고칠 점 한 가지를 정했어요.</label>
+<p class="muted">체크는 스스로 연습을 점검하기 위한 것이며, 전문적인 음성 평가를 대신하지 않아요.</p></div>
+</section></main><footer>☾ 달스케이프 보컬 가이드 · 만든 사람: 달스케이프<br>노래를 이해하고, 나만의 목소리로 부르세요.</footer><script>
+const $=id=>document.getElementById(id);
+function safe(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function showGuide(target,title,items){if(!target)return;target.innerHTML='<h3>'+title+'</h3><ul>'+items.map(x=>'<li>'+safe(x)+'</li>').join('')+'</ul>';}
+
+let mediaRecorder=null, recordedChunks=[], recordedStream=null, recordTimer=null, volumeSamples=[], audioCtx=null, analyser=null, rafId=null;
+const byId=id=>document.getElementById(id);
+function stopMeter(){if(rafId)cancelAnimationFrame(rafId);rafId=null;if(audioCtx){audioCtx.close().catch(()=>{});audioCtx=null}analyser=null}
+function meterLoop(){if(!analyser)return;const data=new Uint8Array(analyser.fftSize);analyser.getByteTimeDomainData(data);let sum=0;for(let i=0;i<data.length;i++){const v=(data[i]-128)/128;sum+=v*v}volumeSamples.push(Math.sqrt(sum/data.length));rafId=requestAnimationFrame(meterLoop)}
+if(byId('startRecord')){
+byId('startRecord').addEventListener('click',async()=>{try{
+if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw new Error('브라우저가 녹음을 지원하지 않아요. HTTPS 주소에서 열어 주세요.');
+recordedStream=await navigator.mediaDevices.getUserMedia({audio:true});recordedChunks=[];volumeSamples=[];
+const AC=window.AudioContext||window.webkitAudioContext;if(AC){audioCtx=new AC();const source=audioCtx.createMediaStreamSource(recordedStream);analyser=audioCtx.createAnalyser();analyser.fftSize=1024;source.connect(analyser);meterLoop()}
+mediaRecorder=new MediaRecorder(recordedStream);mediaRecorder.ondataavailable=e=>{if(e.data&&e.data.size)recordedChunks.push(e.data)};
+mediaRecorder.onstop=()=>{const blob=new Blob(recordedChunks,{type:mediaRecorder.mimeType||'audio/webm'});const player=byId('playback');if(player.dataset.url)URL.revokeObjectURL(player.dataset.url);player.dataset.url=URL.createObjectURL(blob);player.src=player.dataset.url;player.style.display='block';byId('analyzeRecording').disabled=false;byId('recordStatus').textContent='녹음이 끝났어요. 재생해 듣고 기본 체크를 눌러 보세요.';recordedStream.getTracks().forEach(t=>t.stop());recordedStream=null;stopMeter()};
+mediaRecorder.start();byId('startRecord').disabled=true;byId('stopRecord').disabled=false;let left=Number(byId('recordSeconds').value);byId('recordStatus').textContent='녹음 중… '+left+'초 남음';recordTimer=setInterval(()=>{left--;byId('recordStatus').textContent='녹음 중… '+Math.max(0,left)+'초 남음';if(left<=0)byId('stopRecord').click()},1000)
+}catch(e){byId('recordStatus').textContent='녹음할 수 없어요: '+(e.message||'마이크 권한을 확인해 주세요.')}});
+byId('stopRecord').addEventListener('click',()=>{if(recordTimer){clearInterval(recordTimer);recordTimer=null}if(mediaRecorder&&mediaRecorder.state!=='inactive')mediaRecorder.stop();byId('startRecord').disabled=false;byId('stopRecord').disabled=true});
+byId('analyzeRecording').addEventListener('click',()=>{const fb=byId('voiceFeedback');if(!volumeSamples.length){fb.innerHTML='<h3>기본 체크</h3><p>녹음은 저장됐어요. 재생해서 목소리가 또렷한지, 소리가 찢어지지 않는지 직접 확인해 보세요.</p>';return}const avg=volumeSamples.reduce((a,b)=>a+b,0)/volumeSamples.length,peak=Math.max(...volumeSamples);let messages=[];if(avg<0.018)messages.push('입력 음량이 작게 잡혔을 수 있어요. 마이크 위치를 조금 조정하되 목소리를 억지로 크게 내지 마세요.');else if(peak>0.75)messages.push('큰 소리가 입력된 구간이 있어요. 마이크에서 조금 떨어져 편안한 음량으로 다시 녹음해 보세요.');else messages.push('입력 음량은 기본 체크 범위예요. 재생해서 소리가 편안하고 또렷한지 확인해 보세요.');messages.push('연습 순서: 원곡 듣기 → 짧은 구간 부르기 → 녹음 듣기 → 개선점 한 가지 정하기 → 다시 녹음하기.');messages.push('이 체크는 음량 참고용이며 음정·박자·발성법·가창력을 자동 평가하지 않아요.');fb.innerHTML='<h3>기본 체크 결과</h3><ul>'+messages.map(m=>'<li>'+m.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</li>').join('')+'</ul>'})}
+</script></body></html>
